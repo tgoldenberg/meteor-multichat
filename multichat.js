@@ -32,9 +32,6 @@ if (Meteor.isClient) {
   });
 }
 
-
-
-
 Meteor.methods({
   addMessage: function(text) {
     if (! Meteor.userId()) {

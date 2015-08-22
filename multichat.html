@@ -11,7 +11,19 @@
   {{#if currentUser}}
     {{>chat}}
   {{/if}}
+
+  {{#each messages}}
+    {{> message}}
+  {{/each}}
 </body>
+
+<template name="message">
+  <li class="message">
+    <span class="username"><b>{{username}}</b> - on</span>
+    <span class="createdAt">{{createdAt}}</span>
+    <span class="text">{{text}}</span>
+  </li>
+</template>
 
 <template name="chat">
   <h2>New Chat Message: </h2>

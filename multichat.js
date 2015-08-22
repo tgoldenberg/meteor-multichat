@@ -18,7 +18,6 @@ if (Meteor.isClient) {
     'submit .new_chat_message': function(event) {
       event.preventDefault();
       var text = event.target.chat_message.value;
-      console.log(text);
       Meteor.call("addMessage", text);
       document.getElementById("chat_message_field").value = "";
     }

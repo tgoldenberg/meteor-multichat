@@ -3,7 +3,6 @@
 </head>
 
 <body>
-
   <div class="login_bar">
     {{> loginButtons}}
   </div>
@@ -20,7 +19,7 @@
 <template name="message">
   <li class="message">
     <span class="username"><b>{{username}}</b> - on</span>
-    <span class="createdAt">{{createdAt}}</span>
+    <span class="createdAt">{{formatTime createdAt}}</span>
     <span class="text">{{text}}</span>
   </li>
 </template>

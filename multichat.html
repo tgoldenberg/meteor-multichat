@@ -6,21 +6,31 @@
   <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      {{> loginButtons}}
-    </div>
+
 
   </div><!-- /.container-fluid -->
 </nav>
-
-  <h1>Welcome to Meteor!</h1>
-  {{#if currentUser}}
-    {{>chat}}
-  {{/if}}
-
-  {{#each messages}}
-    {{> message}}
-  {{/each}}
+  <div class="container">
+    <div class="well jumbotron">
+      <h2>Meteor Multichat</h2>
+      <p>Simple public chat with MeteorJS, MomentJS, and Bootstrap</p>
+      <div class="navbar-header">
+        <button class="btn-lg btn-primary btn">
+          {{> loginButtons}}
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid chat-form">
+    {{#if currentUser}}
+      {{>chat}}
+    {{/if}}
+  </div>
+  <div class="container-fluid chat-messages">
+    {{#each messages}}
+      {{> message}}
+    {{/each}}
+  </div>
 </body>
 
 <template name="message">

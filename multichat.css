@@ -1,1 +1,27 @@
 /* CSS declarations go here */
+.btn {
+  color: white;
+}
+
+.login-link-text {
+  color: white;
+  text-decoration: none;
+}
+
+.accounts-dialog input[type=text],
+#login-buttons input[type=email],
+.accounts-dialog input[type=email],
+#login-buttons input[type=password],
+.accounts-dialog input[type=password] {
+  padding: 4px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  line-height: 1;
+  width: inherit;
+}
+.navbar-header {
+  height: 100%;
+}
+.jumbotron {
+  height: 10em;
+}

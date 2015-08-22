@@ -8,10 +8,15 @@
     {{> loginButtons}}
   </div>
   <h1>Welcome to Meteor!</h1>
-  {{> hello }}
+  {{#if currentUser}}
+    {{>chat}}
+  {{/if}}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="chat">
+  <h2>New Chat Message: </h2>
+  <form class="new_chat_message">
+    <input type="text" name="chat_message" id="chat_message_field" placeholder="new message"/>
+    <input type="submit" name="commit" value="Send"/>
+  </form>
 </template>

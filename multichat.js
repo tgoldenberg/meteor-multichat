@@ -24,15 +24,18 @@ if (Meteor.isClient) {
     }
   });
 
+  Template.message.helpers({
+    createdAtFormatted: function () {
+      console.log(this.createdAt);
+      return this.createdAt.format('MM/DD/YYYY, HH:MM');
+    }
+  });
+
   Accounts.ui.config({
     passwordSignupFields: "USERNAME_ONLY"
   });
-
 }
-UI.registerHelper('formatTime', function(context, options) {
-  if(context)
-    return moment(context).format('MM/DD/YYYY, hh:mm');
-});
+
 
 Meteor.methods({
   addMessage: function(text) {

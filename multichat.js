@@ -14,6 +14,10 @@ if (Meteor.isClient) {
     }
   });
 
+  Template.registerHelper('formatDate', function(date) {
+    return moment(date).format('MM-DD-YYYY');
+  });
+
   Template.chat.events({
     'submit .new_chat_message': function(event) {
       event.preventDefault();
@@ -23,17 +27,12 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.message.helpers({
-    createdAtFormatted: function () {
-      console.log(this.createdAt);
-      return this.createdAt.format('MM/DD/YYYY, HH:MM');
-    }
-  });
-
   Accounts.ui.config({
     passwordSignupFields: "USERNAME_ONLY"
   });
 }
+
+
 
 
 Meteor.methods({

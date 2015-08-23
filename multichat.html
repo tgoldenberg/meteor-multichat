@@ -4,12 +4,7 @@
 
 <body>
   <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-
-
-  </div><!-- /.container-fluid -->
-</nav>
+  </nav>
   <div class="container first-panel">
     <div class="well jumbotron">
       <h2>Meteor Multichat</h2>
@@ -27,18 +22,25 @@
     {{/if}}
   </div>
   <div class="container-fluid chat-messages">
-    {{#each messages}}
-      {{> message}}
-    {{/each}}
+    <table class="table table-bordered">
+      <tbody>
+        {{#each messages}}
+          {{> message}}
+        {{/each}}
+      </tbody>
+    </table>
   </div>
 </body>
 
 <template name="message">
-  <li class="message">
-    <span class="username"><b>{{username}}</b> - </span>
-    <span class="createdAt">{{livestamp createdAt}}: </span>
-    <span class="text">{{text}}</span>
-  </li>
+  <tr class="message">
+    <span class="username">{{username}}</span><br/>
+    <div class="user-profile">
+      <span class="avatar">{{> avatar user=this shape="square" size="large"}}</span>
+      <span class="text">{{text}}</span><br/>
+    </div>
+    <span class="createdAt">{{livestamp createdAt}}</span>
+  </tr>
 </template>
 
 <template name="chat">

@@ -20,6 +20,7 @@
   width: inherit;
 }
 .first-panel {
+  width: 90%;
   border-bottom: 1px solid #e6e6e6;
 }
 .navbar-header {
@@ -27,6 +28,9 @@
 }
 .jumbotron {
   height: 10em;
+  width: 85%;
+  margin: auto;
+  margin-bottom: 1em;
 }
 #login-buttons a {
   text-decoration: none;
@@ -34,11 +38,72 @@
 .chat-form {
   text-align: center;
 }
+.chat-form h2 {
+  font-weight: 400;
+  padding: .4em;
+  font-size: 2em;
+}
 .chat-form .btn {
   width: 53%;
   margin: auto;
+  font-size: 1.8em;
+  font-weight: 400;
+  letter-spacing: 1.7px;
 }
 #chat_message_field {
   width: 50%;
   margin: auto;
+  font-size: 1.2em;
+}
+.user-profile {
+  display: flex;
+  min-height: 6em;
+}
+.username {
+  padding: 1em;
+  line-height: 2;
+  font-weight: 400;
+}
+.message {
+  border-bottom: 1px solid #b4b4b4;
+  font-size: 1.2em;
+  padding: .5em;
+}
+.createdAt {
+  padding: 1em;
+  line-height: 2;
+  font-weight: 300;
+  font-size: .8em;
+}
+.user-profile .avatar {
+  float: left;
+  border-radius: 2px;
+  width: 4em;
+}
+.user-profile .avatar-initials {
+  border-radius: 2px;
+  margin: auto;
+  margin-left: .5em;
+  position: relative;
+}
+.user-profile .text {
+  background: white;
+  padding: .6em;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  font-weight: 300;
+  font-size: 1.3em;
+  margin-left: 1em;
+}
+.user-profile .avatar-initials:before {
+  content: "";
+  height: 0;
+  width: 100%;
+  position: absolute;
+  border-right: 5px solid white;
+  border-bottom: 5px solid transparent;
+}
+
+.table {
+  background: #f7f7f7;
 }

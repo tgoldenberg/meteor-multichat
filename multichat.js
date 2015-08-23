@@ -26,7 +26,12 @@ if (Meteor.isClient) {
       document.getElementById("chat_message_field").value = "";
     }
   });
-
+  Template.message.helpers({
+    userAvatar: function() {
+      return "";
+    }
+  });
+  
   Accounts.ui.config({
     passwordSignupFields: "USERNAME_ONLY"
   });

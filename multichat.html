@@ -3,14 +3,14 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
 
 
   </div><!-- /.container-fluid -->
 </nav>
-  <div class="container">
+  <div class="container first-panel">
     <div class="well jumbotron">
       <h2>Meteor Multichat</h2>
       <p>Simple public chat with MeteorJS, MomentJS, and Bootstrap</p>
@@ -43,8 +43,12 @@
 
 <template name="chat">
   <h2>New Chat Message: </h2>
-  <form class="new_chat_message">
-    <input type="text" name="chat_message" id="chat_message_field" placeholder="new message"/>
-    <input type="submit" name="commit" value="Send"/>
+  <form class="new_chat_message form-horizontal">
+    <div class="form-group">
+      <input class="form-control" type="text" name="chat_message" id="chat_message_field" placeholder="your message here"/>
+    </div>
+    <div class="form-group">
+      <input class="btn btn-primary" type="submit" name="commit" value="Send"/>
+    </div>
   </form>
 </template>

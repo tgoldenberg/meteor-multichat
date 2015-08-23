@@ -19,9 +19,26 @@
   line-height: 1;
   width: inherit;
 }
+.first-panel {
+  border-bottom: 1px solid #e6e6e6;
+}
 .navbar-header {
-  height: 100%;
+  height: initial;
 }
 .jumbotron {
   height: 10em;
+}
+#login-buttons a {
+  text-decoration: none;
+}
+.chat-form {
+  text-align: center;
+}
+.chat-form .btn {
+  width: 53%;
+  margin: auto;
+}
+#chat_message_field {
+  width: 50%;
+  margin: auto;
 }
